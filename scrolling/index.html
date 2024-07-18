@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Gallery Scroll</title>
+</head>
+
+<body>
+    <div class="gallery-wrap">
+        <!-- Back Button -->
+        <img src="images 2/back.png" id="backbtn" alt="Back">
+        
+        <!-- Gallery Container -->
+        <div class="gallery">
+            <div>
+                <span><img src="images 2/image-1.png" alt="Image 1"></span>
+                <span><img src="images 2/image-2.png" alt="Image 2"></span>
+                <span><img src="images 2/image-3.png" alt="Image 3"></span>
+            </div>
+            <div>
+                <span><img src="images 2/image-4.png" alt="Image 4"></span>
+                <span><img src="images 2/image-5.png" alt="Image 5"></span>
+                <span><img src="images 2/image-6.png" alt="Image 6"></span>
+            </div>
+        </div>
+
+        <!-- Next Button -->
+        <img src="images 2/next.png" id="nextbtn" alt="Next">
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let scrollcontainer = document.querySelector(".gallery");
+            let backbtn = document.getElementById("backbtn");
+            let nextbtn = document.getElementById("nextbtn");
+
+            // Scroll horizontally when using the mouse wheel
+            scrollcontainer.addEventListener("wheel", (evt) => {
+                evt.preventDefault();
+                scrollcontainer.scrollLeft += evt.deltaY;
+                scrollcontainer.style.scrollBehavior = "auto";
+            });
+
+            // Scroll right by 900px when the next button is clicked
+            nextbtn.addEventListener("click", () => {
+                scrollcontainer.style.scrollBehavior = "smooth";
+                scrollcontainer.scrollLeft += 900;
+            });
+
+            // Scroll left by 900px when the back button is clicked
+            backbtn.addEventListener("click", () => {
+                scrollcontainer.style.scrollBehavior = "smooth";
+                scrollcontainer.scrollLeft -= 900;
+            });
+        });
+    </script>
+</body>
+
+</html>

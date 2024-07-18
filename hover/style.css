@@ -1,0 +1,93 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: aqua;
+    height: 50px;
+    align-items: center;
+    position: relative;
+}
+
+.header li a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    position: relative;
+}
+
+.header li {
+    list-style: none;
+    position: relative;
+}
+
+.list-name {
+    min-width: 130px;
+    position: absolute;
+    border: 1px solid black;
+    line-height: 2;
+    box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    z-index: 1;
+    background-color: white;
+    padding: 0; 
+    margin: 0; 
+}
+
+.list-name li {
+    width: 100%; 
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0; 
+}
+
+.list-name li:hover {
+    background-color: blanchedalmond;
+}
+
+.header li:hover .list-name {
+    display: block;
+}
+
+.list-class {
+    width: 100px;
+    position: absolute;
+    border: 1px solid black;
+    line-height: 2;
+    box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    display: none;
+    z-index: 1;
+    background-color: white;
+    padding: 0;
+    margin: 0;
+}
+
+.list-class li {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 0;
+}
+
+.list-class li:hover {
+    background-color: blanchedalmond;
+}
+
+.header li:hover .list-class {
+    display: block;
+}
+
+.header li a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: width 0.3s;
+}
+
+.header li a:hover::after {
+    width: 100%;
+}

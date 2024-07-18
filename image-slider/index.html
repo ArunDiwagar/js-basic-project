@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slides">
+           <img src="Image Slider Files/image-1.jpg" alt="Image 1 "class="active">
+           <img src="Image Slider Files/image-2.jpg" alt="Image 2">
+           <img src="Image Slider Files/image-3.jpg" alt="Image 3">
+           <img src="Image Slider Files/image-4.jpg" alt="Image 4">
+           <img src="Image Slider Files/image-5.jpg" alt="Image 5">
+        </div>
+        <div class="butons">
+            <span class="next">&#10095</span>
+            <span class="prev">&#10094</span>
+          </div>
+          <div class="dotscontainer">
+            <div class="dot active" attr="0" onclick="switchimage(this)"></div>
+            <div class="dot" attr="1"onclick="switchimage(this)"></div>
+            <div class="dot" attr="2"onclick="switchimage(this)"></div>
+            <div class="dot" attr="3"onclick="switchimage(this)"></div>
+            <div class="dot" attr="4"onclick="switchimage(this)"></div>
+          </div>
+    </div>
+ <script src="script.js"></script>
+</body>
+</html>
